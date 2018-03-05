@@ -1,6 +1,65 @@
 function toRoman(input) {
-  // start your code here
-  return to_roman(input);
+
+  if(input >= 1000 ){
+    return "M" + toRoman(input - 1000);
+  }
+
+  if(input >= 900){
+    return 'CM' + toRoman(input - 900);
+  }else {
+    if(input >= 500){
+      return 'D'+ toRoman(input - 500);
+    }
+  }
+
+  if(input >= 400){
+    return 'CD' + toRoman(input - 400);
+  }else {
+    if(input >= 100){
+      return 'C' + toRoman(input - 100);
+    }
+  }
+
+  if(input >= 90){
+    return 'XC' + (input - 90);
+  }else{
+    if(input >= 50){
+      return 'L' + toRoman(input - 50);
+    }
+  }
+
+  if(input >= 40){
+    return 'XL' + toRoman(input - 40);
+  }else{
+    if(input >= 10){
+      return 'X' + toRoman(input - 10);
+    }
+  }
+
+  if(input >= 9){
+    return 'IX' + toRoman(input - 9);
+  }else{
+    if (input >= 5) {
+      return 'V' + toRoman(input - 5);
+    }
+  }
+
+
+  if(input >= 4){
+    return 'IV' + toRoman(input - 4);
+  }else{
+    if(input >= 1){
+      return 'I' + toRoman(input - 1);
+    }else {
+      return '';
+    }
+  }
+
+  if(input < 1){
+    return '';
+  }
+
+  //return to_roman(input);
 }
 
 console.log('My totally sweet testing script for new roman\n')
