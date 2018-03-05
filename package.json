@@ -1,0 +1,23 @@
+{
+  "name": "roman-numerals-recursive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "roman_numerals_recursive.js",
+  "dependencies": {
+    "tape": "^4.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantum-fox-2018/roman-numerals-recursive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quantum-fox-2018/roman-numerals-recursive/issues"
+  },
+  "homepage": "https://github.com/quantum-fox-2018/roman-numerals-recursive#readme"
+}
