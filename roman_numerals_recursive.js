@@ -3,41 +3,13 @@ function toRoman(input) {
   if(input <= 0) {
     return "";
   }
-  if(input >= 1000) {
-    return "M" + toRoman(input - 1000);
-  }
-  if(input >= 900) {
-    return "CM" + toRoman(input - 900);
-  }
-  if(input >= 500) {
-    return "D" + toRoman(input - 500);
-  }
-  if(input >= 400) {
-    return "CD" + toRoman(input - 400);
-  }
-  if(input >= 100) {
-    return "C" + toRoman(input - 100);
-  }
-  if(input >= 90) {
-    return "XC" + toRoman(input - 90);
-  }
-  if(input >= 50) {
-    return "L" + toRoman(input - 50);
-  }
-  if(input >= 40) {
-    return "XL" + toRoman(input - 40);
-  }
-  if(input >= 10) {
-    return "X" + toRoman(input - 10);
-  }
-  if(input >= 9) {
-    return "IX" + toRoman(input - 9);
-  }
-  if(input >= 5) {
-    return "V" + toRoman(input - 500);
-  }
-  if(input >= 1) {
-    return "I" + toRoman(input - 1);
+  var arrNum = [ [1, "I"], [4, "IV"], [5, "V"], [9, "IX"], [10, "X"], [40, "XL"], [50, "L"], [90, "XC"],
+    [100, "C"], [400, "CD"], [500, "D"], [900, "CM"], [1000, "M"] ];
+
+  for(var i = arrNum.length-1; i >= 0; i--) {
+    if(input >= arrNum[i][0]) {
+      return arrNum[i][1] + toRoman(input - arrNum[i][0]);
+    }
   }
   return toRoman(input);
 }
